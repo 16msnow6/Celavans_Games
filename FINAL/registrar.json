@@ -1,6 +1,0 @@
-var Registrar=[
-	{name:"checkers",height:"500px"},
-	{name:"snake",height:"400px"},
-	{name:"mines", height:"300px"},
-	{name:"TickTackToe", height:"1000px"}
-]

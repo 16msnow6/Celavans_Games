@@ -1,0 +1,19 @@
+<!doctype html>
+<html ng-app="checkersGame">
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+		<script src="ang.js"></script>
+		<link rel="stylesheet" href="css.css">
+	</head>
+<body >
+<main ng-controller = "Checkers as c">	
+	<table>
+		<tr ng-repeat="row in c.board" ng-init="rIndex=$index">
+			<td ng-repeat="cell in row track by $index" ng-click="c.click(rIndex,$index)" class={{cell.getClass()}}>
+			</td>
+		</tr>
+	</table>
+	<input type='button' ng-click="c.init()" value="reset">
+	</main>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!-----------------------------------------------------
+Team Orange ©2018. This code belongs to the Team Orange of CS-2450 of Snow College. 
+The members of the team are: Steven Melville, Brandon Isbell, Matthew Snow, Ammon Zerkle and Marcelo Zometa Paniagua
+
+index.html: driver html file. 
+input: none
+output: none
+process: none
+---------------------------------------------------------->
+
+<!-- Head of the file. the mainCss.css and Orange~.png-->
+<html>
+<head>
+<title>Team Orange TTT-ish</title>
+<link rel="stylesheet" href="mainCss.css">
+<link rel ="icon" type="image/png" href="assets/Orange~.png"/>
+<meta charset="ANSI">
+</head>
+
+<!-- Body of the file.-->
+<body>
+	<!--<div id="header">
+
+		<h1>Team Orange Games</h1>
+	  <!----------------------------------------
+
+	    <input type="text" placeholder='name' id="x">
+		<input type="text" placeholder='image' id="y">
+		<button type="button" name="send" onclick="conn.SetPlayer($('#x').val(),$('#y').val())" value="send">->
+
+	
+	
+	  </div>
+	  -->
+
+
+	<!--Creation of div tags to be used in future, each holding 
+	a table inside-->
+	<div class="leaderboard">
+		  <table id = "leader">
+			  
+		  </table>
+	  </div>
+	  
+	  <div class="center" >
+	      <table id = "board">
+
+	      </table>
+	  </div>
+	
+	  <div class="scrabbleHolder">
+		<table id = "scrabble">
+			
+		  </table>
+	  </div>
+	  
+	<form class="PlayerForm" method="post">
+		<!-- creates a form that you can enter or create your nickname you will use for the game. -->
+		<legend>Player settings: </legend>
+      
+		Nickname:<br> <input name="nameUser" class="required" type="text" value=""><br>
+      
+		<div class="userInput"></div> 
+      
+		<button onclick="getPlayer()" type="button" class="submit">Submit</button>
+	</form>
+
+	  
+	  
+	  
+	  
+	<form class="GameForm" method="post">
+		<!-- creates a form that you can enter the elements you want to use for the game into. -->
+		<legend>Game settings</legend>
+    
+		Width (min: 3, max: 100):<br> <input name="width" class="required" type="text" value=""><br>
+    
+		Height (min: 3, max: 100): <br><input name="height" class="required" type="text" value=""><br> 
+    
+		Points to win:<br><input name="pts2win" class="required" type="text" value=""><br>
+    
+		<!--Scrabble: <select name="gameMode">
+		<option value ="YES">True</option>
+		<option value ="No">False</option></select><br>
+		<div class="Dictionary">
+		Dictionary,<br>
+		(seperate each word with a space or an enter)<br>
+		<textarea rows="8" cols="20"></textarea>
+		</div>     -->
+		<button onclick="getGame()" type="button" class="submit">start<br>/reset</button>
+    
+     
+	
+	</form> 
+	
+  
+		<div id="footer">
+			Copyright Team Orange &copy2018;
+		</div>
+
+	  <script src="constants.js"></script>
+	  <script src="Board.js"></script>
+	  <script src="Word.js"></script>
+	  <script src="dictionary.js"></script>
+	  <script src="Player.js"></script>
+	  <script src="Game.js"></script>
+	  <script src="searchBoard.js"></script>
+	  <script src="networkingClient.js"></script>
+	  <!--<script src="/socket.io/socket.io.js"></script>-->
+	  <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+	  <script>var conn = new connection();</script>
+	<noscript>Your computer does not have Javacript available. Please turn it on to enjoy this game</noscript>
+</body>
+</html>
